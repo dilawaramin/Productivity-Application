@@ -33,7 +33,7 @@ Amongst the planned features are a Google Calendar integration, allowing users t
 - Overhauled task organization system
 - Custom due date email notifications
 
-### Screenshots
+## Screenshots
 
 ![image](https://github.com/dilawaramin/Productivity-Application/assets/79779873/0a354061-eb00-4305-844d-a5e9b361f7d3)
 
