@@ -37,7 +37,7 @@ Amongst the planned features are a Google Calendar integration, allowing users t
 
 ![image](https://github.com/dilawaramin/Productivity-Application/assets/79779873/0a354061-eb00-4305-844d-a5e9b361f7d3)
 
-![image](https://github.com/dilawaramin/Productivity-Application/assets/79779873/5e986cb5-471c-4c34-a88e-c85f6990b10e)
+![image](https://github.com/dilawaramin/Productivity-Application/assets/79779873/f7f09a01-c676-4675-a423-af39b749d514)
 
 ![image](https://github.com/dilawaramin/Productivity-Application/assets/79779873/61e7f919-f6a6-49ea-91c0-09169f48c90f)
 
