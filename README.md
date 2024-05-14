@@ -7,6 +7,8 @@ Amongst the planned features are a Google Calendar integration, allowing users t
 ## Table of Contents
 
 - [Features](#features)
+- [Planned Features](#planned-features)
+- [Screenshots](#screenshots)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
@@ -23,7 +25,7 @@ Amongst the planned features are a Google Calendar integration, allowing users t
 - Responsive design
 - Persistent storage using MongoDB
 
-## Planned/Upcoming Features
+## Planned Features
 
 - Google Calendar integration
 - Personal Accounts/Athentication
