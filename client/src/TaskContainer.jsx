@@ -7,6 +7,9 @@ import TaskModal from './TaskModal';
 
 function TaskContainer() {
 
+    // Back-end URI
+    const apiUri = REACT_APP_BACKEND;
+
     // list of tasks
     const [taskList, setTaskList] = useState([]);
 
@@ -16,7 +19,7 @@ function TaskContainer() {
         const taskId = task.id
 
         // update the backend
-        fetch(`http://localhost:5004/api/tasks/${taskId}`, {method: 'PATCH'})
+        fetch(`${apiUri}/api/tasks/${taskId}`, {method: 'PATCH'})
         .then(response => {
             if (!response.ok) {
                 // catch errors in response
@@ -45,7 +48,7 @@ function TaskContainer() {
     // delete function
     const deleteTask = async (taskId) => {
         // request to server first
-        fetch(`http://localhost:5004/api/tasks/${taskId}`, {method: 'DELETE'})
+        fetch(`${apiUri}/api/tasks/${taskId}`, {method: 'DELETE'})
         .then(response => {
             if (!response.ok) {
                 // catch errors in response
@@ -61,7 +64,7 @@ function TaskContainer() {
 
     // Populate list of tasks from server
     useEffect(() => {
-        fetch("http://localhost:5004/api/tasks").then(
+        fetch(`${apiUri}/api/tasks`).then(
             response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');

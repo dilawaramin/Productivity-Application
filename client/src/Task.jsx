@@ -7,6 +7,9 @@ import trash from './icons/trash-can.png';
 
 function Task( {taskName, task, onCheck, onDelete} ) {
 
+    // Back-end URI
+    const apiUri = REACT_APP_BACKEND;
+
     // task modal function
     const [modalState, setModalState] = useState(false);
 
@@ -21,7 +24,7 @@ function Task( {taskName, task, onCheck, onDelete} ) {
         const taskId = task.id
 
         // update the backend
-        fetch(`http://localhost:5004/api/tasks/desc/${taskId}`, {method: 'PATCH', 
+        fetch(`${apiUri}/api/tasks/desc/${taskId}`, {method: 'PATCH', 
         headers: {
             'Content-Type': 'application/json',
         },

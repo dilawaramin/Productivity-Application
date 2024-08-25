@@ -4,6 +4,9 @@ import plus from './icons/plus-sign.png';
 
 function Addtask( {addTask, taskList} ) {
 
+    // Back-end URI
+    const apiUri = REACT_APP_BACKEND;
+
     // DEFAULT DATE AND DESCRIPTION VALUES
     const DEFAULT_DATE = () => {
         return new Date().toISOString().slice(0, 10);
@@ -100,7 +103,7 @@ function Addtask( {addTask, taskList} ) {
         };
 
         try {
-            const response = await fetch('http://localhost:5004/api/tasks', {
+            const response = await fetch(`${apiUri}/api/tasks`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
