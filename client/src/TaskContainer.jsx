@@ -8,7 +8,7 @@ import TaskModal from './TaskModal';
 function TaskContainer() {
 
     // Back-end URI
-    const apiUri = REACT_APP_BACKEND;
+    const apiUri = process.env.REACT_APP_BACKEND;
 
     // list of tasks
     const [taskList, setTaskList] = useState([]);

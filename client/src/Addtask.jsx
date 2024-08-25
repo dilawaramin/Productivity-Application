@@ -5,7 +5,7 @@ import plus from './icons/plus-sign.png';
 function Addtask( {addTask, taskList} ) {
 
     // Back-end URI
-    const apiUri = REACT_APP_BACKEND;
+    const apiUri = process.env.REACT_APP_BACKEND;
 
     // DEFAULT DATE AND DESCRIPTION VALUES
     const DEFAULT_DATE = () => {

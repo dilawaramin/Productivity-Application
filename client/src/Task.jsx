@@ -8,7 +8,7 @@ import trash from './icons/trash-can.png';
 function Task( {taskName, task, onCheck, onDelete} ) {
 
     // Back-end URI
-    const apiUri = REACT_APP_BACKEND;
+    const apiUri = process.env.REACT_APP_BACKEND;
 
     // task modal function
     const [modalState, setModalState] = useState(false);
