@@ -43,6 +43,12 @@ function Addtask( {addTask, taskList} ) {
             alert('Task must have a name');
             return;
         }
+
+        // Check if the task list already has 25 tasks
+        if (taskList.length >= 25) {
+            alert('No more tasks allowed');
+            return;
+        }
         
         // calcualate new id
         const lastTaskId = getLastTaskId();
