@@ -21,19 +21,17 @@ app.use(express.json());
 
 const uri = process.env.MONGO_URI;
 const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
-async function run() {
-  try {
-    // Create a Mongoose client with a MongoClientOptions object to set the Stable API version
-    await mongoose.connect(uri, clientOptions);
-    await mongoose.connection.db.admin().command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await mongoose.disconnect();
-  }
-}
 
-run().catch(console.dir);
+mongoose.connect(uri, clientOptions)
+  .then(() => {
+    console.log("Connected to MongoDB successfully!");
+  })
+  .catch((error) => {
+    console.error("Error connecting to MongoDB:", error);
+  });
+
+console.log('MONGO_URI:', process.env.MONGO_URI);
+
 
 
 const Task = mongoose.model('Task', taskObject)
@@ -280,5 +278,5 @@ app.delete(`/api/tasks/:id`, (req, res) => {
 
 
 // start server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5004;
 app.listen(PORT, () => {console.log(`Server started on port ${PORT}`)}); 

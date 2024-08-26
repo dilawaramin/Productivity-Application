@@ -66,6 +66,7 @@ function TaskContainer() {
     useEffect(() => {
         fetch(`${apiUri}/api/tasks`).then(
             response => {
+                console.log(apiUri)
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
