@@ -7,7 +7,7 @@ import dotenv from 'dotenv';
 import taskObject from './task.js';
 
 
-
+dotenv.config();
 
 // initialization
 const app = express() 
@@ -19,11 +19,12 @@ app.use(express.json());
 // dotenv.config();
 // mongoose.connect(process.env.MONGO_URI);
 
+const uri = process.env.MONGO_URI;
 const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
 async function run() {
   try {
     // Create a Mongoose client with a MongoClientOptions object to set the Stable API version
-    await mongoose.connect(MONGO_URI, clientOptions);
+    await mongoose.connect(uri, clientOptions);
     await mongoose.connection.db.admin().command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
