@@ -263,5 +263,5 @@ app.delete(`/api/tasks/:id`, (req, res) => {
 
 
 // start server
-const PORT = 5004;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {console.log(`Server started on port ${PORT}`)}); 
